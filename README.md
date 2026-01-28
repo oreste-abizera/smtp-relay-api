@@ -11,7 +11,7 @@ A stateless email microservice built with Next.js. Acts as a secure bridge to re
 
 ### Endpoint
 
-`POST https://your-vercel-app.vercel.app/api/send-email`
+`POST https://smtp-relay-api.vercel.app/api/send-email`
 
 ### Headers
 
@@ -42,7 +42,7 @@ A stateless email microservice built with Next.js. Acts as a secure bridge to re
 
 ```javascript
 async function sendEmailViaRelay(smtpConfig, emailData) {
-  const RELAY_URL = 'https://your-vercel-deployment.vercel.app/api/send-email';
+  const RELAY_URL = 'https://smtp-relay-api.vercel.app/api/send-email';
   const MY_SECRET_KEY = process.env.RELAY_SECRET_KEY;
 
   const response = await fetch(RELAY_URL, {
