@@ -37,10 +37,9 @@ export default function TestPage() {
     const { name, value, type } = e.target;
     setFormData((prev) => ({
       ...prev,
-      // @ts-ignore
       [name]:
         type === "checkbox"
-          ? e.target.checked
+          ? (e.target as HTMLInputElement).checked
           : type === "number"
             ? Number(value)
             : value,
