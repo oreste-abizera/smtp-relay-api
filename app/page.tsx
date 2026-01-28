@@ -13,6 +13,12 @@ export default function Home() {
           </div>
           <div className="flex gap-4">
             <Link
+              href="/test"
+              className="text-sm font-medium text-slate-400 transition-colors hover:text-white flex items-center"
+            >
+              Test Playground
+            </Link>
+            <Link
               href="https://github.com/oreste-abizera/smtp-relay-api"
               target="_blank"
               className="group flex items-center gap-2 rounded-full bg-slate-800 px-4 py-1.5 text-sm font-medium transition-all hover:bg-slate-700 hover:text-white"

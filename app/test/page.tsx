@@ -11,6 +11,8 @@ import {
   Loader2,
 } from "lucide-react";
 
+import Link from "next/link"; // Added import
+
 export default function TestPage() {
   const [loading, setLoading] = useState(false);
   const [response, setResponse] = useState<any>(null);
@@ -93,7 +95,15 @@ export default function TestPage() {
   return (
     <div className="min-h-screen bg-slate-950 text-slate-200 p-6 flex justify-center selection:bg-cyan-500/30">
       <div className="w-full max-w-4xl">
-        <header className="mb-10 text-center">
+        <header className="mb-10 text-center relative">
+          <div className="absolute left-0 top-0">
+            <Link
+              href="/"
+              className="text-slate-500 hover:text-white text-sm flex items-center gap-1 transition-colors"
+            >
+              &larr; Home
+            </Link>
+          </div>
           <div className="inline-flex items-center gap-2 text-cyan-400 font-bold text-xl mb-2">
             <Server className="w-6 h-6" />
             <span>Universal Mailer Test Bench</span>
